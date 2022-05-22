@@ -72,11 +72,27 @@ body {
     font-weight: bold;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
+}
+
+.restart {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px;
+    border: none;
+    font-weight: bold;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.restart:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }

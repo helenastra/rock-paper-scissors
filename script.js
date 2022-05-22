@@ -2,6 +2,7 @@ const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
+const restartButton =  document.querySelector('[data-restart]')
 const SELECTIONS = [
     {
         name: 'rock',
@@ -20,6 +21,7 @@ const SELECTIONS = [
     },
 ]
 
+restartButton.addEventListener('click', () => restartGame())
 selectionButtons.forEach(selectionButton => {
     selectionButton.addEventListener('click', e => {
         const selectionName = selectionButton.dataset.selection
@@ -60,7 +62,12 @@ function computerPlay() {
     const random = Math.floor(Math.random() * SELECTIONS.length)
     return SELECTIONS[random]
 }
-
-
-
-
+  
+  function restartGame() {
+    computerScoreSpan.innerHTML = 0
+    yourScoreSpan.innerText = 0
+    const boxes = document.querySelectorAll('.result-selection');
+    boxes.forEach(box => {
+        box.remove();
+    });
+}
