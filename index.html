@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
+    <div class='header'>
+        <h1>ROCK PAPER SCISSORS</h1>
+    </div>
+    
+    <div class="selections">
+        <button class="selection" data-selection="rock">🪨</button>
+        <button class="selection" data-selection="paper">📄</button>
+        <button class="selection" data-selection="scissors">✂️</button>
+    </div>
+    <div class="results">
+        <div>
+            YOU:
+            <span class="result-score" data-your-score>0</span>
+        </div>
+        <div data-final-column>
+            COMPUTER:
+            <span class="result-score" data-computer-score>0</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        Copyright © helenastra 
+    </div>
+
+    
 </body>
 
 </html>
