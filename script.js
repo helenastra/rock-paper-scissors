@@ -1,4 +1,4 @@
-const selectionButtons = document.querySelectorAll('[data-selection');
+const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
@@ -23,6 +23,7 @@ const SELECTIONS = [
 selectionButtons.forEach(selectionButton => {
     selectionButton.addEventListener('click', e => {
         const selectionName = selectionButton.dataset.selection
+        console.log(selectionName)
         const selection = SELECTIONS.find(selection => selection.name === selectionName)
         makeSelection(selection)
     })
@@ -58,7 +59,7 @@ function isWinner(selection, opponentSelection) {
 
 function computerPlay() {
     const random = Math.floor(Math.random() * SELECTIONS.length)
-    return SELECTIONS[random];
+    return SELECTIONS[random]
 }
 
 
