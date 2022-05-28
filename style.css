@@ -81,18 +81,28 @@ a:hover {
     text-decoration: underline;
 }
 
+.restart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
 .restart {
     background-color: black;
     color: white;
     display: flex;
-    padding: 20px;
+    width: 25vh;
+    padding: 15px;
     border: none;
     font-weight: bold;
     justify-content: center;
-    margin-bottom: 30px;
+    transition: 100ms;
+    border-radius: 20px;
 }
 
 .restart:hover {
     transform: scale(1.2);
     cursor: pointer;
+    background-color: red;
 }
